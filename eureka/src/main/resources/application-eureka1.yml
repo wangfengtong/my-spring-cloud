@@ -1,0 +1,13 @@
+server:
+  port: 7001
+
+spring:
+  application:
+    name: EurekaServer
+eureka:
+  instance:
+    hostname: eureka1.wft.com
+  client:
+    service-url:
+      defaultZone: http://eureka1.wft.com:7002/eureka/
+
