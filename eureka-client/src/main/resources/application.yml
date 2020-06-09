@@ -1,15 +1,13 @@
 server:
-  port: 7001
-
+  port: 8000
 spring:
   application:
-    name: EurekaServer
+    name: eureka-client
+
 eureka:
   instance:
-    hostname: eureka1.wft.com
     prefer-ip-address: true
     instance-id: ${spring.cloud.client.ipAddress}:${server.port}
   client:
     service-url:
-      defaultZone: http://eureka2.wft.com:7002/eureka/
-
+      defaultZone: http://eureka1.wft.com:7001/eureka/,http://eureka2.wft.com:7002/eureka/
